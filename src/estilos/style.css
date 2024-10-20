@@ -1,0 +1,114 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    width: 100vw;
+    height: 100vh;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid black;
+    flex: 1;
+}
+
+.menu-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.menu-col>:nth-child(2) {
+    margin-top: 1rem;
+}
+
+.table {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    /* Colunas flexíveis com min 150px */
+    grid-auto-flow: row;
+    gap: 10px;
+
+    flex: 10;
+    overflow: hidden;
+    padding: 5%;
+
+    background-color: #e5e5e5;
+    opacity: 0.8;
+    background-image: linear-gradient(30deg, #f9f9ff 12%, transparent 12.5%, transparent 87%, #f9f9ff 87.5%, #f9f9ff), linear-gradient(150deg, #f9f9ff 12%, transparent 12.5%, transparent 87%, #f9f9ff 87.5%, #f9f9ff), linear-gradient(30deg, #f9f9ff 12%, transparent 12.5%, transparent 87%, #f9f9ff 87.5%, #f9f9ff), linear-gradient(150deg, #f9f9ff 12%, transparent 12.5%, transparent 87%, #f9f9ff 87.5%, #f9f9ff), linear-gradient(60deg, #f9f9ff77 25%, transparent 25.5%, transparent 75%, #f9f9ff77 75%, #f9f9ff77), linear-gradient(60deg, #f9f9ff77 25%, transparent 25.5%, transparent 75%, #f9f9ff77 75%, #f9f9ff77);
+    background-size: 20px 35px;
+    background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
+    transition: all 1s ease; /* Adiciona transição suave */
+}
+
+.tableCell {
+
+    border: 3px solid #969191;
+    box-shadow: 10px 5px 5px red;
+    aspect-ratio: 1 / 1;
+    /* Mantém as células quadradas */
+    max-width: 100%;
+    max-height: 100%;
+    flex: 1;
+    border-radius: 3%;
+    font-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image: linear-gradient(135deg, #444cf7 25%, transparent 25%), linear-gradient(225deg, #444cf7 25%, transparent 25%), linear-gradient(45deg, #444cf7 25%, transparent 25%), linear-gradient(315deg, #444cf7 25%, #e5e5f7 25%);
+    background-position: 10px 0, 10px 0, 0 0, 0 0;
+    background-size: 10px 10px;
+    background-repeat: repeat;
+    transition: all 1s ease; /* Adiciona transição suave */
+   
+}
+.tableCell[disabled=true]{
+    background-color: rgb(54, 54, 54);
+}
+
+.tableCell h2 {
+    
+    flex: 1;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.tableCell:hover {
+    cursor: pointer;
+}
+
+.flipCell {
+    background-color: white;
+    opacity: 1;
+    background-image: none;
+
+}
+
+.coutdown {
+    position: absolute;
+    top: 35%;
+    left: 45vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vw;
+    width: 10vw;
+
+    border-radius: 50%;
+    border: 5px solid rgb(0, 0, 0);
+}
+
+.coutdown h2 {
+    font-size: 4vw;
+    text-align: center;
+    color: rgb(0, 0, 0);
+
+}
