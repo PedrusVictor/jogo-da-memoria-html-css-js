@@ -29,7 +29,7 @@ header {
 
 .table {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(8%, 1fr));
     /* Colunas flexíveis com min 150px */
     grid-auto-flow: row;
     gap: 10px;
