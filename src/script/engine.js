@@ -1,8 +1,4 @@
-function getRandom(min, max) {
-    min = Math.ceil(min)
-    max = Math.floor(max)
-    return Math.floor(Math.random() * (max - min + 1)) + min
-}
+
 const size = 10;
 
 function createCards(number) {
@@ -57,35 +53,18 @@ const state = {
 
 function embaralhar() {
 
-    for (let a = 0; a < 2; a++) {
+    var array = Array.from({ length: size * 2 }, (v, k) => parseInt(k/2));
 
-        var array = Array.from({ length: size }, (v, k) => k)
-
-
-
-        while (array.length > 0) {
-
-
-            let nSorteado = getRandom(0, array.length - 1)
-
-
-            var valor = array[nSorteado]
-
-
-
-            state.values.arrayCell.push(valor)
-
-            array.splice(nSorteado, 1)
-
-
-        }
-
-
-
+    console.log(array)
+    for (let a = 0; a < array.length; a++) {
+        const j = Math.floor(Math.random() * (a + 1));
+    
+        // Troca os elementos array[a] e array[j] diretamente
+        [array[a], array[j]] = [array[j], array[a]];
+        
     }
-
-
-
+    state.values.arrayCell = array
+    
 
 }
 
